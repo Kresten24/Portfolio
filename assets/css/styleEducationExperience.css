@@ -1,28 +1,30 @@
-html, body{
+/* html, body{
 	height: 100%;
 	background: linear-gradient(to right, #8e9eab, #eef2f3);
-}
-
+} */
+/* 
 .container{
 	margin-bottom: 5%;
 	background-color: white;
 	padding-top: 2%;
 	padding-bottom: 2%;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
 .container p{
 	text-align: center;
 	line-height: 130%;
-}
-.volunteering{
+} */
+/* .volunteering{
 	margin-top: 30%;
 }
 @media only screen and (max-width: 768px){
 	.volunteering{
 		margin-top: 0px;
 	}
-}
-hr{
+} */
+ hr{
 	width: 50%;
 	height: 1%;
 	border-radius: 50%;
@@ -48,8 +50,11 @@ hr{
     50%  {background-color:#FFFFFF}
     75%  {background-color:#000000}
     100% {background-color:#000000}
-}
-
+} 
+/* 
 h4{
 	font-family: 'Cinzel', serif;
+} */
+.edu p{
+	text-align: center;
 }
