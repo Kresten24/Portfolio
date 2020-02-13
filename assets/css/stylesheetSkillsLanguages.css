@@ -823,6 +823,42 @@ to {
 to {
     width: 90%}
 }
+#Skill-Moqups.moqups {
+    width: 90%;
+    animation: Animate-Moqups 4s;
+    -webkit-animation: Animate-Moqups 4s;
+    -moz-animation: Animate-Moqups 4s;
+    -o-animation: Animate-Moqups 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
 #Skill-Illustrator.illustrator {
     width: 90%;
     animation: Animate-Illustrator 4s;
