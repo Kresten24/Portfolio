@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kresten Ordekian</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="assets/js/paperJS/dist/paper-full.js"></script>
+
+	<script type="text/paperscript" canvas="myCanvas">
+	// The amount of stars we want to make:
+	var count = 400;
+
+	// Create a symbol, which we will use to place instances of later:
+	var path = new Path.Star({
+		center: [70, 70],
+		points: 5,
+		radius1: 8,
+		radius2: 15,
+		fillColor: '#343a40',
+		shadowColor: new Color('rgba(133, 133, 133)'),
+		shadowBlur: 5,
+		shadowOffset: new Point(-5, 0),
+	});
+	function onFrame(event) {
+	    path.rotate(3, path.center);
+	}
+
+	var symbol = new Symbol(path);
+
+	// Place the instances of the symbol:
+	for (var i = 0; i < count; i++) {
+		// The center position is a random point in the view:
+		var center = Point.random() * view.size;
+		var placedSymbol = symbol.place(center);
+		placedSymbol.scale(i / count);
+	}
+
+	// The onFrame function is called up to 60 times a second:
+	function onFrame(event) {
+		// Run through the active layer's children list and change
+		// the position of the placed symbols:
+		for (var i = 0; i < count; i++) {
+			var item = project.activeLayer.children[i];
+
+			// Move the item 1/20th of its width to the right. This way
+			// larger circles move faster than smaller circles:
+			item.position.x += item.bounds.width / 20;
+
+			// If the item has left the view on the right, move it back
+			// to the left:
+			if (item.bounds.left > view.size.width) {
+				item.position.x = -item.bounds.width;
+			}
+		}
+	}
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Boogaloo|Vollkorn|Forum|Source+Serif+Pro|Cinzel"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+	<script defer src="assets/js/ScrollTrigger.min.js"></script>
+	<!-- <script defer>
+
+	document.addEventListener('DOMContentLoaded', function(){
+		var trigger = new ScrollTrigger({
+			addHeight: true
+		});
+	});
+	</script> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleEducationExperience.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheetSkillsLanguages.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/styleProjectsInterests.css"> -->
+	<script defer src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script defer type="text/javascript" src="assets/js/anim.js"></script>
+
+	</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<header class="sticky-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#Home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#Education">Education & Experience</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#Skills">Skills & Languages</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#Projects">Projects & Interests</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div id="wrap">
+		<section id="Home" class="introImage">
+			<div class="containerInto"><canvas id="myCanvas" resize></canvas>
+				<div class="row justify-content-center" style="margin-left: 0; margin-right: 0;">
+					<div class="intro col-xl-3 col-lg-6 col-md-9 col-sm-9 col-9">
+						<img id="circle" src="kiki.jpg">
+						<span id="name">Kresten Ordekian</span>
+						<p class="info"> Software Engineer <br>
+							Montreal, Canada</p>
+						<p class="info">krestenordekian@gmail.com <br>
+							+1(438) 993-7426 </p>
+						<span class="info"><button class="button">
+								<a class="cv" href="KrestenCV.pdf" title="download the pdf file"><i
+										class="fas fa-file-download"></i> Download CV
+								</a></button></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h4>About</h4>
+						<hr style="width: 15%;">
+						<p style="font-size: 100%; line-height: 200%; font-family: 'Merriweather', serif;">
+							&nbsp;&nbsp;Hi, I am a Software Engineer with a passion
+							for designing creative webites. I acquired skills from University and personal projects. I
+							teach web design in my free time and would like to dive deeper into the industry. <br>
+							<i class="fas fa-star"></i> Browse my site to see all I can offer <i
+								class="fas fa-star"></i>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <div id="sketch-holder" style="right: 0; position: absolute;"> -->
+		<!-- Our sketch will go here!
+						</div> -->
+		<section id="Education">
+			<div class="container edu">
+				<div class="row" style="padding-top: 3%; border-radius: 1%;">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<h4>Education</h4>
+						<hr>
+						<p>
+							<span>2016 - 2021</span> <br>
+							<b><i>Concordia University</i></b> <br>
+							Software Engineering
+						</p><br>
+						<p>
+							<span>2015 - 2016</span> <br>
+							<b><i>McGill University</i></b> <br>
+							Intensive English Language Program
+						</p><br>
+						<p>
+							<span>2015 - 2016</span> <br>
+							<b><i>Cegep de Saint Laurent</i></b> <br>
+							Intensive French Language Program
+						</p><br>
+						<!-- <p>
+										<span>2013 - 2014</span> <br>
+										<b><i>University of Aleppo</i></b> <br>
+										BA in Telecommunication Engineering
+									</p><br>
+									<p>
+									<span>2007 - 2013</span> <br>
+									<b><i>Karen Jeppe Armenian College</i></b> <br>
+									High School Diploma Natural Science
+								</p> -->
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<h4>Experience</h4>
+						<hr>
+						<p>
+							<span>
+								<span>2019 - present</span> <br>
+								<b><i>CDI college</i></b> <br>
+								Web Development and Design Instructor
+							</span>
+						</p>
+						<p>
+							<span>2017 - present</span> <br>
+							<b><i>Open Source Software</i></b> <br>
+							Personal projects with source control (Github)
+						</p><br>
+
+						<h4 class="volunteering">Volunteer Experience</h4>
+						<hr>
+						<p>
+							<span>2015 - 2016</span> <br>
+							<b><i>CACI (Centre d'appui aux communaut&#233;s immigrants)</i></b> <br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="Skills">
+			<div class="container">
+				<h4>Skills & languages</h4>
+				<hr>
+				<div class="card-deck">
+					<!-- <div class="card">
+						<img class="card-img-top" src="assets/images/uiux.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title artificial-light">UI/UX Design</h5>
+							<ul>
+								<li>Photoshop</li>
+								<li>Illustrator</li>
+								<li>Moqups</li>
+								<li>Figma</li>
+							</ul>
+						</div>
+
+					</div> -->
+					<div class="card">
+						<img class="card-img-top" src="assets/images/front.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Front-End</h5>
+							<ul>
+								<li>HTML&CSS</li>
+								<li>Bootstrap</li>
+								<li>JavaScript</li>
+								<li>jQuery</li>
+								<li>React</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="card">
+						<img class="card-img-top" src="assets/images/back.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Back-End</h5>
+							<ul>
+								<li>Java</li>
+								<li>Python</li>
+								<li>PHP</li>
+								<li>NodeJS</li>
+								<li>MySql</li>
+								<li>NPM</li>
+								<li>Ruby</li>
+								<li>MongoDB</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="card">
+						<img class="card-img-top" src="assets/images/misc.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Miscellaneous</h5>
+							<ul>
+								<li>Git</li>
+								<li>Cloud9</li>
+								<li>Photoshop</li>
+								<li>Illustrator</li>
+								<li>Moqups</li>
+								<li>Figma</li>
+								<li>Blender</li>
+								<li>Unit Tests</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<div class="card">
+						<img class="card-img-top" src="assets/images/lang.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title artificial-light">Languages</h5>
+							<ul>
+								<li>English</li>
+								<li>Armenian</li>
+								<li>Arabic</li>
+								<li>Turkish</li>
+								<li>French</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section id="Skills">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4>Skills & languages</h4>
+								<hr>
+								<div>
+									<h5 data-scroll="toggle(.fromLeftIn, .fromLeftOut)"><b>Front-end</b></h5>
+									<div class="row">
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area">HTML&CSS</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-HTML-CSS" data-scroll=".Skill-HTML-CSS">
+													<span class="PercentText ">100%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">Bootstrap</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-Bootstrap">
+													<span class="PercentText ">95%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">JavaScript</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-JavaScript">
+													<span class="PercentText ">80%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">Jquery</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-Jquery">
+													<span class="PercentText ">55%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+									</div>
+									<div>
+										<h5 data-scroll="toggle(.fromRightIn, .fromRightOut)"><b>Back-end</b></h5>
+										<div class="row">
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Java</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Java">
+														<span class="PercentText ">70%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area">Python</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Python">
+														<span class="PercentText ">70%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">PHP</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-PHP">
+														<span class="PercentText ">65%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">NodeJS</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-NodeJS">
+														<span class="PercentText ">55%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">MySql</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-MySql">
+														<span class="PercentText ">65%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">NPM</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-NPM">
+														<span class="PercentText ">55%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Ruby</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Ruby">
+														<span class="PercentText ">55%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">MongoDB</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-MongoDB">
+														<span class="PercentText ">50%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+										</div>
+									</div>
+									<div>
+										<h5 data-scroll="toggle(.fromLeftIn, .fromLeftOut)"><b>Miscellaneous</b></h5>
+										<div class="row">
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Git</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Git">
+														<span class="PercentText ">85%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Cloud9</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Cloud9">
+														<span class="PercentText ">75%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Photoshop</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Photoshop">
+														<span class="PercentText ">90%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Illustrator</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Illustrator">
+														<span class="PercentText ">90%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Moqups</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Moqups">
+														<span class="PercentText ">90%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Blender</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-Blender">
+														<span class="PercentText ">45%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+												<span class="Skill-Area ">Unit Tests</span>
+											</div>
+											<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="skillBar">
+													<div id="Skill-UnitTests">
+														<span class="PercentText ">55%</span>
+													</div>
+												</div>
+												<br>
+											</div>
+										</div>
+									</div>
+									<h5 data-scroll="toggle(.fromRightIn, .fromRightOut)"><b>Languages</b></h5>
+									<div class="row">
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">English</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-English">
+													<span class="PercentText ">90%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">French</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-French">
+													<span class="PercentText ">65%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">Armenian</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-Armenian">
+													<span class="PercentText ">100%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">Arabic</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-Arabic">
+													<span class="PercentText ">100%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+
+										<div class="skill col-xl-1 col-lg-12 col-md-12 col-sm-12 col-12">
+											<span class="Skill-Area ">Turkish</span>
+										</div>
+										<div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div class="skillBar">
+												<div id="Skill-Turkish">
+													<span class="PercentText ">100%</span>
+												</div>
+											</div>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section> -->
+		<section id="Projects" style="padding-top: 1%;">
+			<div class="container edu">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<h4>Projects</h4>
+						<hr>
+						<p>Portfolio</p>
+						<p>Sign Language learning platform</p>
+						<p>NavConcordia</p>
+						<p>E-store Website</p>
+						<p>QA Website</p>
+						<p>Basic web games</p>
+
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+						<h4>Interests</h4>
+						<hr>
+						<p>Photography&emsp;&emsp;Cooking</p>
+						<p>Learning languages&emsp;Hiking</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		&copy; 2021 &nbsp; Designed by Kresten Ordekian.
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+		integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

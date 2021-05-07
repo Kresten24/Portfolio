@@ -1,0 +1,958 @@
+/*.container{
+	background: white;
+
+}*/
+@media only screen and (max-width: 1200px){
+	.skill{
+		text-align: left;
+	}
+}
+#Skill-Git.git {
+    width: 85%;
+    animation: Animate-Git 4s;
+    -webkit-animation: Animate-Git 4s;
+    -moz-animation: Animate-Git 4s;
+    -o-animation: Animate-Git 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Git {
+    from {
+    width: 10px;
+}
+to {
+    width: 85%}
+}@-webkit-keyframes Animate-Git {
+    from {
+    width: 10px;
+}
+to {
+    width: 85%}
+}@-moz-keyframes Animate-Git {
+    from {
+    width: 10px;
+}
+to {
+    width: 85%}
+}@-o-keyframes Animate-Git {
+    from {
+    width: 10px;
+}
+to {
+    width: 85%}
+}
+#Skill-Cloud9.cloud9 {
+    width: 75%;
+    animation: Animate-Cloud9 4s;
+    -webkit-animation: Animate-Cloud9 4s;
+    -moz-animation: Animate-Cloud9 4s;
+    -o-animation: Animate-Cloud9 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Cloud9 {
+    from {
+    width: 10px;
+}
+to {
+    width: 75%}
+}@-webkit-keyframes Animate-Cloud9 {
+    from {
+    width: 10px;
+}
+to {
+    width: 75%}
+}@-moz-keyframes Animate-Cloud9 {
+    from {
+    width: 10px;
+}
+to {
+    width: 75%}
+}@-o-keyframes Animate-Cloud9 {
+    from {
+    width: 10px;
+}
+to {
+    width: 75%}
+}
+#Skill-Blender.blender {
+    width: 45%;
+    animation: Animate-Blender 4s;
+    -webkit-animation: Animate-Blender 4s;
+    -moz-animation: Animate-Blender 4s;
+    -o-animation: Animate-Blender 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Blender {
+    from {
+    width: 10px;
+}
+to {
+    width: 45%}
+}@-webkit-keyframes Animate-Blender {
+    from {
+    width: 10px;
+}
+to {
+    width: 45%}
+}@-moz-keyframes Animate-Blender {
+    from {
+    width: 10px;
+}
+to {
+    width: 45%}
+}@-o-keyframes Animate-Blender {
+    from {
+    width: 10px;
+}
+to {
+    width: 45%}
+}
+#Skill-UnitTests.unitTests {
+    width: 55%;
+    animation: Animate-UnitTests 4s;
+    -webkit-animation: Animate-UnitTests 4s;
+    -moz-animation: Animate-UnitTests 4s;
+    -o-animation: Animate-UnitTests 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-UnitTests {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-webkit-keyframes Animate-UnitTests {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-moz-keyframes Animate-UnitTests {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-o-keyframes Animate-UnitTests {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}
+
+.SkillBar {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    background: rgba(17, 17, 17, .3);
+    margin: 20px auto;
+}
+#Skill-English.english {
+    width: 90%;
+    animation: Animate-English 4s;
+    -webkit-animation: Animate-English 4s;
+    -moz-animation: Animate-English 4s;
+    -o-animation: Animate-English 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-English {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-English {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-English {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-English {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+#Skill-French.french {
+    width: 65%;
+    animation: Animate-French 4s;
+    -webkit-animation: Animate-French 4s;
+    -moz-animation: Animate-French 4s;
+    -o-animation: Animate-French 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-French {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-webkit-keyframes Animate-French {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-moz-keyframes Animate-French {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-o-keyframes Animate-French {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}
+#Skill-Armenian.armenian {
+    width: 100%;
+    animation: Animate-Armenian 4s;
+    -webkit-animation: Animate-Armenian 4s;
+    -moz-animation: Animate-Armenian 4s;
+    -o-animation: Animate-Armenian 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Armenian {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-webkit-keyframes Animate-Armenian {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-moz-keyframes Animate-Armenian {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-o-keyframes Animate-Armenian {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}
+#Skill-Arabic.arabic {
+    width: 100%;
+    animation: Animate-Arabic 4s;
+    -webkit-animation: Animate-Arabic 4s;
+    -moz-animation: Animate-Arabic 4s;
+    -o-animation: Animate-Arabic 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Arabic {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-webkit-keyframes Animate-Arabic {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-moz-keyframes Animate-Arabic {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-o-keyframes Animate-Arabic {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}
+#Skill-Turkish.turkish {
+    width: 100%;
+    animation: Animate-Turkish 4s;
+    -webkit-animation: Animate-Turkish 4s;
+    -moz-animation: Animate-Turkish 4s;
+    -o-animation: Animate-Turkish 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Turkish {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-webkit-keyframes Animate-Turkish {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-moz-keyframes Animate-Turkish {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-o-keyframes Animate-Turkish {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}
+
+#Skill-HTML-CSS.htmlcss {
+    width: 100%;
+    animation: Animate-HTML-CSS 4s;
+    -webkit-animation: Animate-HTML-CSS 4s;
+    -moz-animation: Animate-HTML-CSS 4s;
+    -o-animation: Animate-HTML-CSS 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7,#343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-HTML-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-webkit-keyframes Animate-HTML-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-moz-keyframes Animate-HTML-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-o-keyframes Animate-HTML-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}
+/* .fromRightIn
+{
+	transition: transform 1.0s ease, opacity 1.0s ease;
+
+	transform: translate(0,0);
+	opacity: 1.0;
+}
+
+.fromRightOut
+{
+	transition: transform 1.0s ease, opacity 1.0s ease;
+
+	transform: translate(10px, 0);
+	opacity: 0.0;
+} */
+#Skill-Bootstrap.bootstrap {
+    width: 95%;
+    animation: Animate-Bootstrap 4s;
+    -webkit-animation: Animate-Bootstrap 4s;
+    -moz-animation: Animate-Bootstrap 4s;
+    -o-animation: Animate-Bootstrap 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 95%}
+}@-webkit-keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 95%}
+}@-moz-keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 95%}
+}@-o-keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 95%}
+}
+#Skill-JavaScript.js {
+    width: 80%;
+    animation: Animate-JavaScript 4s;
+    -webkit-animation: Animate-JavaScript 4s;
+    -moz-animation: Animate-JavaScript 4s;
+    -o-animation: Animate-JavaScript 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}@-webkit-keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}@-moz-keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}@-o-keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}
+#Skill-Jquery.jq {
+    width: 55%;
+    animation: Animate-Jquery 4s;
+    -webkit-animation: Animate-Jquery 4s;
+    -moz-animation: Animate-Jquery 4s;
+    -o-animation: Animate-Jquery 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Jquery {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-webkit-keyframes Animate-Jquery {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-moz-keyframes Animate-Jquery {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-o-keyframes Animate-Jquery {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}
+#Skill-Java.java {
+    width: 70%;
+    animation: Animate-Java 4s;
+    -webkit-animation: Animate-Java 4s;
+    -moz-animation: Animate-Java 4s;
+    -o-animation: Animate-Java 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Java {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-webkit-keyframes Animate-Java {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-moz-keyframes Animate-Java {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-o-keyframes Animate-Java {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+#Skill-Python.python {
+    width: 70%;
+    animation: Animate-Python 4s;
+    -webkit-animation: Animate-Python 4s;
+    -moz-animation: Animate-Python 4s;
+    -o-animation: Animate-Python 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Python {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-webkit-keyframes Animate-Python {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-moz-keyframes Animate-Python {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-o-keyframes Animate-Python {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+#Skill-PHP.php {
+    width: 65%;
+    animation: Animate-PHP 4s;
+    -webkit-animation: Animate-PHP 4s;
+    -moz-animation: Animate-PHP 4s;
+    -o-animation: AnimatePHP 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-webkit-keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-moz-keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-o-keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}
+#Skill-NodeJS.nodejs {
+    width: 55%;
+    animation: Animate-NodeJS 4s;
+    -webkit-animation: Animate-NodeJS 4s;
+    -moz-animation: Animate-NodeJS 4s;
+    -o-animation: Animate-NodeJS 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-NodeJS {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-webkit-keyframes Animate-NodeJS {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-moz-keyframes Animate-NodeJS {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-o-keyframes Animate-NodeJS {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}
+#Skill-MySql.mysql {
+    width: 65%;
+    animation: Animate-MySql 4s;
+    -webkit-animation: Animate-MySql 4s;
+    -moz-animation: Animate-MySql 4s;
+    -o-animation: Animate-MySql 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-MySql {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-webkit-keyframes Animate-MySql {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-moz-keyframes Animate-MySql {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}@-o-keyframes Animate-MySql {
+    from {
+    width: 10px;
+}
+to {
+    width: 65%}
+}
+#Skill-NPM.npm {
+    width: 55%;
+    animation: Animate-NPM 4s;
+    -webkit-animation: Animate-NPM 4s;
+    -moz-animation: Animate-NPM 4s;
+    -o-animation: Animate-NPM 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-NPM {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-webkit-keyframes Animate-NPM {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-moz-keyframes Animate-NPM {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-o-keyframes Animate-NPM {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}
+#Skill-Ruby.ruby {
+    width: 55%;
+    animation: Animate-Ruby 4s;
+    -webkit-animation: Animate-Ruby 4s;
+    -moz-animation: Animate-Ruby 4s;
+    -o-animation: Animate-Ruby 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Ruby {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-webkit-keyframes Animate-Ruby {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-moz-keyframes Animate-Ruby {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}@-o-keyframes Animate-Ruby {
+    from {
+    width: 10px;
+}
+to {
+    width: 55%}
+}
+#Skill-MongoDB.mongodb {
+    width: 50%;
+    animation: Animate-MongoDB 4s;
+    -webkit-animation: Animate-MongoDB 4s;
+    -moz-animation: Animate-MongoDB 4s;
+    -o-animation: Animate-MongoDB 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-MongoDB {
+    from {
+    width: 10px;
+}
+to {
+    width: 50%}
+}@-webkit-keyframes Animate-MongoDB {
+    from {
+    width: 10px;
+}
+to {
+    width: 50%}
+}@-moz-keyframes Animate-MongoDB {
+    from {
+    width: 10px;
+}
+to {
+    width: 50%}
+}@-o-keyframes Animate-MongoDB {
+    from {
+    width: 10px;
+}
+to {
+    width: 50%}
+}
+#Skill-Photoshop.photoshop {
+    width: 90%;
+    animation: Animate-Photoshop 4s;
+    -webkit-animation: Animate-Photoshop 4s;
+    -moz-animation: Animate-Photoshop 4s;
+    -o-animation: Animate-Photoshop 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Photoshop {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-Photoshop {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-Photoshop {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-Photoshop {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+#Skill-Moqups.moqups {
+    width: 90%;
+    animation: Animate-Moqups 4s;
+    -webkit-animation: Animate-Moqups 4s;
+    -moz-animation: Animate-Moqups 4s;
+    -o-animation: Animate-Moqups 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-Moqups {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+#Skill-Illustrator.illustrator {
+    width: 90%;
+    animation: Animate-Illustrator 4s;
+    -webkit-animation: Animate-Illustrator 4s;
+    -moz-animation: Animate-Illustrator 4s;
+    -o-animation: Animate-Illustrator 4s;
+    height: 22px;
+    position: relative;
+    background: linear-gradient(to right, #bdc3c7, #343a40);
+    border-radius: 50%;
+}
+@keyframes Animate-Illustrator {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-Illustrator {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-Illustrator {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-IIllustrator {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+
+
+.skill{
+	padding-right: 0;
+}
+hr{
+	width: 30%;
+	height: 0.5%;
+}
+@media only screen and (max-width: 1020px){
+	hr{
+		width: 50%;
+	}
+}
+.row{
+	margin-bottom: 2%;
+}
+.PercentText {
+    font-family: 'Boogaloo', cursive;
+
+    color: whitesmoke;
+}
+.fromLeftIn
+{
+    transition: transform 1.0s ease, opacity 1.0s ease;
+
+    transform: translate(0,0);
+    opacity: 1.0;
+}
+
+.fromLeftOut
+{
+    transition: transform 1.0s ease, opacity 1.0s ease;
+
+    transform: translate(-10px,0);
+    opacity: 0.0;
+}
+
+.fromRightIn
+{
+    transition: transform 1.0s ease, opacity 1.0s ease;
+
+    transform: translate(0,0);
+    opacity: 1.0;
+}
+
+.fromRightOut
+{
+    transition: transform 1.0s ease, opacity 1.0s ease;
+
+    transform: translate(10px, 0);
+    opacity: 0.0;
+}
+
+
+
+h5{
+    font-size: 150%;
+    line-height: 70px;
+    font-family: 'Forum', cursive;
+}
